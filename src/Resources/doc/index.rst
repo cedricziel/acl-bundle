@@ -95,6 +95,19 @@ running the following command:
 .. code-block:: bash
 
     $ php bin/console acl:init
+    
+If you are using `DoctrineMigrationsBundle`, the schema changes can be applied
+by diffing your current schema.
+
+.. code-block:: bash
+
+    $ php bin/console doctrine:migration:diff
+    
+This will create a new migration you can then apply.
+
+.. code-block:: bash
+
+    $ php bin/console doctrine:migration:migrate
 
 Getting Started
 ---------------
@@ -243,4 +256,5 @@ added above:
 The user is now allowed to view, edit, delete, and un-delete objects.
 
 .. _`built-in security voters`: https://symfony.com/doc/current/security/voters.html
+.. _`DoctrineMigrationsBundle`: https://symfony.com/doc/master/bundles/DoctrineMigrationsBundle/index.html
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
