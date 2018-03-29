@@ -92,20 +92,20 @@ system is supposed to use:
 After the connection is configured, you have to import the database structure
 running the following command:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ php bin/console acl:init
-    
-If you are using `DoctrineMigrationsBundle`, the schema changes can be applied
+
+If you are using `DoctrineMigrationsBundle`_, the schema changes can be applied
 by diffing your current schema.
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ php bin/console doctrine:migration:diff
-    
+
 This will create a new migration you can then apply.
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ php bin/console doctrine:migration:migrate
 
